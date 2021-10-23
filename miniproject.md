@@ -538,6 +538,10 @@ Then we should use `cros_sdk` to generate the payload.
 cros_generate_update_payload  --tgt-image ../../backup/amd64-generic/latest/chromiumos_test_image.bin --output ../build/
 ```
 it will generate delta.bin and bulid.json, copy them into `static_dir`.
+restart devserver
+```sh
+sudo docker run -p 8080:8080 --rm -ti dev_server
+```
 
 ### Move the update payload to the  static_dir of the devserver inside docker  
 Before copy the json file, should add the appid which is null will cause error. 
