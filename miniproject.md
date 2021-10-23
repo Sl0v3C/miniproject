@@ -454,7 +454,7 @@ RUN chown -R test:test /dev_server/
 USER test
 
 WORKDIR /dev_server/dev
-ErrorCode::kNoUpdate(53)
+
 CMD ./devserver.py
 ```
 
